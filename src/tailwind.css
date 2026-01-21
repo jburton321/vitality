@@ -1618,6 +1618,10 @@ input,
     width: 13rem;
   }
 
+  .sm\:w-auto{
+    width: auto;
+  }
+
   .sm\:flex-1{
     flex: 1 1 0%;
   }
