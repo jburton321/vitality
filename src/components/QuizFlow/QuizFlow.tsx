@@ -30,16 +30,28 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
+  const shouldSkipSpouseStep = () => {
+    return formData.travel === "friends" || formData.travel === "alone";
+  };
+
   const handleNext = () => {
     if (currentStep < totalSteps) {
-      setCurrentStep((prev) => prev + 1);
+      let nextStep = currentStep + 1;
+      if (currentStep === 2 && shouldSkipSpouseStep()) {
+        nextStep = 4;
+      }
+      setCurrentStep(nextStep);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   const handleBack = () => {
     if (currentStep > 1) {
-      setCurrentStep((prev) => prev - 1);
+      let prevStep = currentStep - 1;
+      if (currentStep === 4 && shouldSkipSpouseStep()) {
+        prevStep = 2;
+      }
+      setCurrentStep(prevStep);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else if (onBack) {
       onBack();
