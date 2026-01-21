@@ -183,7 +183,7 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
     <div className="min-h-screen">
       <div className="bg-white flex flex-col gap-0 justify-start relative z-10">
         <Navbar />
-        <div className="h-[104px] sm:h-[56px]" />
+        <div className="h-[120px] sm:h-[64px]" />
         <div className="md:hidden w-full relative">
           <img
             src="/frame-4273216650.png"
