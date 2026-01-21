@@ -8,7 +8,7 @@ export const Navbar = (): JSX.Element => {
           <div className="flex flex-col sm:flex-row items-center sm:justify-between px-4 sm:px-6 py-3 sm:py-4 gap-2 sm:gap-0">
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-center justify-center sm:justify-start">
               <img
-                className="w-32 h-32 sm:w-16 sm:h-16 object-contain"
+                className="w-48 h-auto sm:w-40 sm:h-auto object-contain"
                 src="/logo-vitality.png"
                 alt="Vitality Vacations Logo"
               />

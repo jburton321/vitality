@@ -16,8 +16,8 @@ export const LpD = ({ className, ...props }: ILpDProps): JSX.Element => {
         <div className="flex flex-row gap-4 items-center justify-start shrink-0 relative">
           <div className="bg-[#ffffff] p-2.5 flex flex-row gap-2.5 items-center justify-start shrink-0 h-[79px] relative">
             <img
-              className="border-solid border-[transparent] border shrink-0 w-[101.18px] h-[101.18px] relative"
-              style={{ objectFit: "cover" }}
+              className="shrink-0 w-[180px] h-auto relative"
+              style={{ objectFit: "contain" }}
               src="/logo-vitality.png"
             />
           </div>
