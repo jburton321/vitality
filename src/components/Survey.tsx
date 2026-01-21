@@ -20,24 +20,24 @@ export const Survey = (): JSX.Element => {
             <div className="flex flex-col gap-0 items-center justify-start w-full">
               <div className="flex flex-col gap-2 items-center justify-start w-full">
                 <div className="flex flex-col sm:flex-row gap-2 items-center justify-center">
-                  <div className="text-black text-center font-bold text-xl sm:text-2xl uppercase">
+                  <div className="text-black text-center font-bold text-2xl uppercase" style={{ fontFamily: "Montserrat-Bold, sans-serif" }}>
                     Answer
                   </div>
-                  <div className="text-blue-600 text-center font-bold text-xl sm:text-2xl uppercase">
+                  <div className="text-blue-600 text-center font-bold text-2xl uppercase" style={{ fontFamily: "Montserrat-Bold, sans-serif" }}>
                     5 Quick questions
                   </div>
                 </div>
-                <div className="text-black text-center text-xl sm:text-2xl font-normal uppercase">
+                <div className="text-black text-center text-2xl font-normal uppercase" style={{ fontFamily: "Montserrat-Regular, sans-serif" }}>
                   to see if you qualify for
                   <br />
                   our Future of Travel
                 </div>
-                <div className="text-blue-900 text-center text-4xl sm:text-5xl font-normal" style={{ fontFamily: "Brinattan-Regular, sans-serif" }}>
+                <div className="text-blue-900 text-center text-5xl font-normal" style={{ fontFamily: "Brinattan-Regular, sans-serif" }}>
                   Couple&#039;s Focus Group
                 </div>
               </div>
               <div className="border-solid border-gray-300 border py-3 flex flex-row gap-2 items-center justify-center w-full mt-4">
-                <div className="text-black text-center font-normal text-base px-4">
+                <div className="text-black text-center font-normal text-base px-4" style={{ fontFamily: "Montserrat-Regular, sans-serif" }}>
                   Choose from U.S., Canada, or Mexico destinations
                 </div>
               </div>
@@ -66,7 +66,7 @@ export const Survey = (): JSX.Element => {
                   <div className="bg-white flex-1 h-1"></div>
                   <div className="flex flex-row gap-2 items-center justify-start shrink-0">
                     <Clock className="w-5 h-5 text-gray-900" />
-                    <div className="text-black text-left font-semibold text-base sm:text-lg leading-relaxed whitespace-nowrap">
+                    <div className="text-black text-left font-semibold text-lg leading-[30px] whitespace-nowrap" style={{ fontFamily: "Montserrat-SemiBold, sans-serif" }}>
                       Survey time: 2 minutes
                     </div>
                   </div>

@@ -7,12 +7,12 @@ export const Navbar = (): JSX.Element => {
         <div className="flex flex-row gap-4 items-center justify-start">
           <div className="bg-white p-2 flex flex-row gap-2 items-center justify-start h-20">
             <img
-              className="border-solid border-transparent border w-24 h-24 object-cover"
+              className="border-solid border-transparent border w-[101px] h-[101px] object-cover"
               src="_1024-x-1024-vitality-logo0.png"
               alt="Vitality Vacations Logo"
             />
           </div>
-          <div className="text-blue-600 text-left font-extrabold text-base sm:text-lg uppercase font-sans">
+          <div className="text-blue-600 text-left font-extrabold text-[17px] leading-none uppercase" style={{ fontFamily: "Montserrat-ExtraBold, sans-serif" }}>
             VIRTUAL TRAVEL CLUB SURVEY
           </div>
         </div>
@@ -20,7 +20,7 @@ export const Navbar = (): JSX.Element => {
           <div className="bg-yellow-400 rounded-2xl w-8 h-8 flex items-center justify-center">
             <Phone className="w-4 h-4 text-white" />
           </div>
-          <div className="text-left font-semibold text-sm">
+          <div className="text-left font-semibold text-sm" style={{ fontFamily: "Montserrat-SemiBold, sans-serif" }}>
             <span className="text-gray-900">Call to Claim </span>
             <span className="text-blue-600">%PHONE%</span>
           </div>
