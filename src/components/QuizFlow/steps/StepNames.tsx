@@ -8,13 +8,6 @@ interface StepNamesProps {
 export const StepNames = ({ firstName, lastName, onFirstNameChange, onLastNameChange }: StepNamesProps): JSX.Element => {
   return (
     <div className="flex flex-col gap-6 items-center w-full">
-      <div className="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
-        <img
-          src="/step3.jpg"
-          alt="Step illustration"
-          className="w-full h-auto object-cover"
-        />
-      </div>
       <h2
         className="text-blue-900 text-center font-bold text-fluid-2xl uppercase"
         style={{ fontFamily: "Montserrat-Bold, sans-serif" }}

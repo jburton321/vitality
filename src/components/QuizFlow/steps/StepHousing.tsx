@@ -17,7 +17,6 @@ export const StepHousing = ({ value, onSelect }: StepHousingProps): JSX.Element 
       options={housingOptions}
       selectedValue={value}
       onSelect={onSelect}
-      image="/step4.png"
     />
   );
 };

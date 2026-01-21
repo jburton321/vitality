@@ -19,7 +19,6 @@ export const StepTravel = ({ value, onSelect }: StepTravelProps): JSX.Element =>
       options={travelOptions}
       selectedValue={value}
       onSelect={onSelect}
-      image="/step2.png"
     />
   );
 };
