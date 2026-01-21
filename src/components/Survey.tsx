@@ -12,7 +12,7 @@ export const Survey = (): JSX.Element => {
       }}
     >
       <div className="flex flex-col gap-0 items-center justify-start w-full max-w-7xl px-4 sm:px-6">
-        <div className="flex flex-col lg:flex-row gap-0 items-start justify-start w-full">
+        <div className="flex flex-col lg:flex-row gap-0 items-stretch justify-start w-full">
           <article
             className="bg-gray-100 bg-opacity-75 py-12 sm:py-16 px-6 sm:px-12 flex flex-col gap-8 items-center justify-center flex-1 min-h-full"
             style={{ backdropFilter: "blur(30px)" }}
