@@ -8,7 +8,7 @@ interface FadingImageGalleryProps {
 
 export const FadingImageGallery = ({
   images,
-  interval = 4000,
+  interval = 3000,
   className = "",
 }: FadingImageGalleryProps): JSX.Element => {
   const [currentIndices, setCurrentIndices] = useState<number[]>([0, 1, 2]);
@@ -32,7 +32,7 @@ export const FadingImageGallery = ({
       setTimeout(() => {
         setCurrentIndices(newIndices);
         setIsTransitioning(false);
-      }, 500);
+      }, 400);
     }, interval);
 
     return () => clearInterval(timer);
@@ -52,10 +52,6 @@ export const FadingImageGallery = ({
             className="absolute inset-0 w-full h-full object-cover rounded-lg sm:rounded-xl"
             src={images[currentIndices[slotIndex]].src}
             alt={images[currentIndices[slotIndex]].alt}
-            style={{
-              opacity: isTransitioning ? 0 : 1,
-              transition: "opacity 0.5s ease-in-out",
-            }}
           />
           <img
             className="absolute inset-0 w-full h-full object-cover rounded-lg sm:rounded-xl"
@@ -63,7 +59,7 @@ export const FadingImageGallery = ({
             alt={images[nextIndices[slotIndex]].alt}
             style={{
               opacity: isTransitioning ? 1 : 0,
-              transition: "opacity 0.5s ease-in-out",
+              transition: "opacity 0.4s ease-in-out",
             }}
           />
         </div>

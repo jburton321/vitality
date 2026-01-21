@@ -63,14 +63,14 @@ export const Survey = ({ onStartClick }: SurveyProps): JSX.Element => {
               </div>
               <FadingImageGallery
                 images={[
-                  { src: "/rectangle-60.png", alt: "Times Square destination" },
-                  { src: "/rectangle0.png", alt: "Mountain lake destination" },
-                  { src: "/rectangle-239010.png", alt: "Historic pyramid destination" },
-                  { src: "/rectangle-239020.png", alt: "Beach resort destination" },
-                  { src: "/frame-4273216650.png", alt: "Sunset beach destination" },
-                  { src: "/frame-4273216680.png", alt: "Coastal resort destination" },
+                  { src: "/step1.png", alt: "Destination 1" },
+                  { src: "/step2.png", alt: "Destination 2" },
+                  { src: "/step3.jpg", alt: "Destination 3" },
+                  { src: "/step4.png", alt: "Destination 4" },
+                  { src: "/step5.png", alt: "Destination 5" },
+                  { src: "/step6.png", alt: "Destination 6" },
                 ]}
-                interval={4000}
+                interval={3000}
               />
               <div className="pt-6 sm:pt-8 flex flex-col gap-4 sm:gap-5 items-start justify-start w-full">
                 <div className="flex flex-row gap-2 items-center justify-center w-full">
