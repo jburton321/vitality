@@ -31,7 +31,7 @@ export const Navbar = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <div className="sm:hidden bg-yellow-400 w-full py-3 flex flex-row gap-3 items-center justify-center">
+      <div className="sm:hidden bg-yellow-400 py-3 flex flex-row gap-3 items-center justify-center">
         <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center">
           <Phone className="w-5 h-5 text-yellow-400" />
         </div>
