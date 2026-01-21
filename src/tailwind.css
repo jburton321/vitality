@@ -581,8 +581,8 @@ input,
   position: relative;
 }
 
-.-top-12{
-  top: -3rem;
+.-top-\[72px\]{
+  top: -72px;
 }
 
 .left-1\/2{
@@ -638,12 +638,12 @@ input,
   height: 3.5rem;
 }
 
-.h-24{
-  height: 6rem;
-}
-
 .h-28{
   height: 7rem;
+}
+
+.h-36{
+  height: 9rem;
 }
 
 .h-4{
@@ -726,8 +726,8 @@ input,
   width: 3.5rem;
 }
 
-.w-24{
-  width: 6rem;
+.w-36{
+  width: 9rem;
 }
 
 .w-4{
@@ -1142,6 +1142,10 @@ input,
 
 .pt-16{
   padding-top: 4rem;
+}
+
+.pt-20{
+  padding-top: 5rem;
 }
 
 .pt-3{
