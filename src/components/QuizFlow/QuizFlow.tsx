@@ -272,13 +272,13 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
             <div className="flex flex-col gap-0 items-center justify-start w-full max-w-7xl px-4 sm:px-6">
               <div className="flex flex-col md:flex-row gap-0 items-stretch justify-start w-full">
                 <img
-                  className="hidden md:block flex-1 w-full self-stretch object-cover transition-opacity duration-300"
+                  className="hidden md:block w-full md:w-1/2 self-stretch object-cover transition-opacity duration-300"
                   src={getStepImage()}
                   alt="Step illustration"
                   key={currentStep}
                 />
                 <article
-                  className="bg-gray-100 bg-opacity-75 py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 flex flex-col gap-6 sm:gap-8 items-center justify-start flex-1"
+                  className="bg-gray-100 bg-opacity-75 py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 flex flex-col gap-6 sm:gap-8 items-center justify-start w-full md:w-1/2"
                   style={{ backdropFilter: "blur(30px)" }}
                 >
                   <StepContainer step={currentStep} totalSteps={totalSteps}>

@@ -2079,6 +2079,10 @@ input,
     height: 8rem;
   }
 
+  .md\:w-1\/2{
+    width: 50%;
+  }
+
   .md\:w-32{
     width: 8rem;
   }
