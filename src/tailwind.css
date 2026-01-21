@@ -577,6 +577,10 @@ input,
   pointer-events: none;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -589,6 +593,14 @@ input,
   bottom: -4rem;
 }
 
+.bottom-0{
+  bottom: 0px;
+}
+
+.left-0{
+  left: 0px;
+}
+
 .left-1\/2{
   left: 50%;
 }
@@ -597,8 +609,16 @@ input,
   left: 50%;
 }
 
+.right-0{
+  right: 0px;
+}
+
 .top-\[50\%\]{
   top: 50%;
+}
+
+.z-0{
+  z-index: 0;
 }
 
 .z-10{

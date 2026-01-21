@@ -7,24 +7,26 @@ import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="bg-white flex flex-col gap-0 justify-start overflow-hidden min-h-screen">
-      <Navbar />
-      <div className="sm:hidden w-full relative">
-        <img
-          src="/frame-4273216650.png"
-          alt="Beach sunset"
-          className="w-full h-auto object-cover aspect-video"
-        />
-        <img
-          src="/stamp.png"
-          alt="Future of Travel Focus Group"
-          className="absolute left-1/2 -translate-x-1/2 -bottom-16 w-32 h-32 z-10"
-        />
+    <div className="min-h-screen">
+      <div className="bg-white flex flex-col gap-0 justify-start overflow-hidden relative z-10">
+        <Navbar />
+        <div className="sm:hidden w-full relative">
+          <img
+            src="/frame-4273216650.png"
+            alt="Beach sunset"
+            className="w-full h-auto object-cover aspect-video"
+          />
+          <img
+            src="/stamp.png"
+            alt="Future of Travel Focus Group"
+            className="absolute left-1/2 -translate-x-1/2 -bottom-16 w-32 h-32 z-10"
+          />
+        </div>
+        <main className="w-full flex flex-col items-center flex-1">
+          <Hero />
+          <Survey />
+        </main>
       </div>
-      <main className="w-full flex flex-col items-center flex-1">
-        <Hero />
-        <Survey />
-      </main>
       <Footer />
     </div>
   );
