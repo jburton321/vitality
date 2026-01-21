@@ -758,6 +758,10 @@ input,
   height: 100px;
 }
 
+.h-\[104px\]{
+  height: 104px;
+}
+
 .h-\[120px\]{
   height: 120px;
 }
@@ -776,10 +780,6 @@ input,
 
 .h-\[79px\]{
   height: 79px;
-}
-
-.h-\[88px\]{
-  height: 88px;
 }
 
 .h-\[90px\]{
@@ -1915,8 +1915,8 @@ input,
     height: 1.25rem;
   }
 
-  .sm\:h-\[48px\]{
-    height: 48px;
+  .sm\:h-\[56px\]{
+    height: 56px;
   }
 
   .sm\:w-36{
