@@ -1,3 +1,5 @@
+import { ButtonPrimaryStateV1 } from "../ButtonPrimaryStateV1/ButtonPrimaryStateV1";
+
 export const Hero = (): JSX.Element => {
   return (
     <section className="w-full bg-gradient-to-r from-blue-900 to-blue-600 px-4 sm:px-6 pt-20 sm:pt-4 pb-4 sm:py-6">
@@ -30,12 +32,9 @@ export const Hero = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <button
-          className="hidden sm:block shrink-0 bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 px-6 rounded-lg text-sm uppercase tracking-wide transition-colors duration-200"
-          style={{ fontFamily: "Montserrat-Bold, sans-serif" }}
-        >
-          Claim Now
-        </button>
+        <div className="hidden sm:block shrink-0">
+          <ButtonPrimaryStateV1 text="START NOW" />
+        </div>
       </div>
     </section>
   );
