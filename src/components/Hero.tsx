@@ -1,7 +1,17 @@
 export const Hero = (): JSX.Element => {
   return (
-    <section className="w-full bg-gradient-to-r from-blue-900 to-blue-600 px-4 sm:px-6 py-6">
-      <div className="flex flex-col sm:flex-row gap-6 items-center justify-start max-w-7xl mx-auto">
+    <section
+      className="w-full px-4 sm:px-6 py-6 bg-cover bg-center"
+      style={{
+        backgroundImage: "url(/frame-4273216680.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+      <div className="flex flex-col sm:flex-row gap-6 items-center justify-start max-w-7xl mx-auto px-4 sm:px-6 py-6 rounded-lg" style={{
+        background: "linear-gradient(90deg, rgba(7, 29, 78, 1.00) 0%, rgba(57, 108, 177, 1.00) 100%)"
+      }}>
         <img
           src="/stamp.png"
           alt="Future of Travel Focus Group"
