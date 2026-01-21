@@ -13,9 +13,6 @@ export const Navbar = (): JSX.Element => {
                 alt="Vitality Vacations Logo"
               />
               <div className="flex flex-col gap-1 text-center sm:text-left">
-                <div className="text-gray-900 font-semibold text-sm" style={{ fontFamily: "Montserrat-SemiBold, sans-serif" }}>
-                  VITALITY VACATIONS
-                </div>
                 <div className="text-blue-600 font-extrabold text-[17px] leading-none uppercase" style={{ fontFamily: "Montserrat-ExtraBold, sans-serif" }}>
                   VIRTUAL TRAVEL CLUB SURVEY
                 </div>
