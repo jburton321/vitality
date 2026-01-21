@@ -10,7 +10,7 @@ export const Footer = (): JSX.Element => {
       >
         <img
           className="w-40 sm:w-52 h-auto object-contain"
-          src="rectangle0.png"
+          src="/logo-vitality-light.png"
           alt="Company Logo"
         />
         <div

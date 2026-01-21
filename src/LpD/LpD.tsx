@@ -213,9 +213,9 @@ export const LpD = ({ className, ...props }: ILpDProps): JSX.Element => {
       </div>
       <div className="bg-[#071d4e] pt-12 pb-12 flex flex-col gap-8 items-center justify-center self-stretch shrink-0 relative">
         <img
-          className="shrink-0 w-[209px] h-28 relative"
-          style={{ objectFit: "cover" }}
-          src="rectangle0.png"
+          className="shrink-0 w-[209px] h-auto relative"
+          style={{ objectFit: "contain" }}
+          src="/logo-vitality-light.png"
         />
         <div className="text-basic-white text-center font-['Roboto-Regular',_sans-serif] text-[13px] leading-[22px] font-normal relative w-[531px]">
           Copyright © 2026 VitalityVacations.com | All rights reserved.
