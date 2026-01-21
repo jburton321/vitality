@@ -18,7 +18,7 @@ export const LpD = ({ className, ...props }: ILpDProps): JSX.Element => {
             <img
               className="border-solid border-[transparent] border shrink-0 w-[101.18px] h-[101.18px] relative"
               style={{ objectFit: "cover" }}
-              src="_1024-x-1024-vitality-logo0.png"
+              src="/logo-vitality.png"
             />
           </div>
           <div
