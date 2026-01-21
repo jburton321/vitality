@@ -9,6 +9,13 @@ export default function App() {
   return (
     <div className="bg-white flex flex-col gap-0 items-center justify-start overflow-hidden">
       <Navbar />
+      <div className="sm:hidden w-full">
+        <img
+          src="/frame-4273216650.png"
+          alt="Beach sunset"
+          className="w-full h-auto object-cover"
+        />
+      </div>
       <main className="w-full">
         <Hero />
         <Survey />
