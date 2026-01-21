@@ -121,15 +121,10 @@ export const LpD = ({ className, ...props }: ILpDProps): JSX.Element => {
                 className="text-left font-['-',_sans-serif] text-[28px] leading-none font-normal uppercase relative self-stretch"
                 style={{ letterSpacing: "0.03em" }}
               >
-                <span>
-                  <span className="complimentary-3-day-2-night-span">
-                    Complimentary
-                  </span>
-                  <br />
-                  <span className="complimentary-3-day-2-night-span2">
-                    3-DAY/2-NIGHT
-                  </span>
-                </span>{" "}
+                <span className="flex flex-col">
+                  <span className="text-[#f5c518]">Complimentary</span>
+                  <span className="text-white whitespace-nowrap">3-DAY/2-NIGHT</span>
+                </span>
               </div>
               <div className="flex flex-row gap-4 items-center justify-start shrink-0 relative">
                 <div className="text-[#ffffff] text-left font-['Montserrat-Bold',_sans-serif] text-5xl leading-none font-bold uppercase relative">

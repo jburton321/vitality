@@ -1296,6 +1296,11 @@ input,
   color: rgb(7 29 78 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#f5c518\]{
+  --tw-text-opacity: 1;
+  color: rgb(245 197 24 / var(--tw-text-opacity, 1));
+}
+
 .text-\[\#fcb814\]{
   --tw-text-opacity: 1;
   color: rgb(252 184 20 / var(--tw-text-opacity, 1));
