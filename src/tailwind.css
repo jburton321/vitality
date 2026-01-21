@@ -581,12 +581,24 @@ input,
   position: relative;
 }
 
+.-bottom-12{
+  bottom: -3rem;
+}
+
+.left-1\/2{
+  left: 50%;
+}
+
 .left-\[50\%\]{
   left: 50%;
 }
 
 .top-\[50\%\]{
   top: 50%;
+}
+
+.z-10{
+  z-index: 10;
 }
 
 .mx-auto{
@@ -718,6 +730,10 @@ input,
   width: 6rem;
 }
 
+.w-28{
+  width: 7rem;
+}
+
 .w-4{
   width: 1rem;
 }
@@ -796,6 +812,11 @@ input,
 
 .shrink-0{
   flex-shrink: 0;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform{
@@ -1082,11 +1103,6 @@ input,
   padding-bottom: 0.75rem;
 }
 
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1102,6 +1118,10 @@ input,
 
 .pb-3{
   padding-bottom: 0.75rem;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
 }
 
 .pb-6{
@@ -1406,6 +1426,10 @@ input,
     margin-top: 1rem;
   }
 
+  .sm\:block{
+    display: block;
+  }
+
   .sm\:flex{
     display: flex;
   }
@@ -1426,20 +1450,12 @@ input,
     height: 4rem;
   }
 
-  .sm\:h-28{
-    height: 7rem;
-  }
-
   .sm\:h-5{
     height: 1.25rem;
   }
 
   .sm\:w-16{
     width: 4rem;
-  }
-
-  .sm\:w-28{
-    width: 7rem;
   }
 
   .sm\:w-5{
@@ -1548,6 +1564,10 @@ input,
   .sm\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  .sm\:pt-4{
+    padding-top: 1rem;
   }
 
   .sm\:pt-8{
