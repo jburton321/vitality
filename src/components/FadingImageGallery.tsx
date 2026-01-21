@@ -13,29 +13,55 @@ export const FadingImageGallery = ({
 }: FadingImageGalleryProps): JSX.Element => {
   const [currentIndices, setCurrentIndices] = useState<number[]>([0, 1, 2]);
   const [nextIndices, setNextIndices] = useState<number[]>([0, 1, 2]);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [transitioning, setTransitioning] = useState<boolean[]>([false, false, false]);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      const availableIndices = Array.from({ length: images.length }, (_, i) => i);
-      const newIndices: number[] = [];
+    const timers: NodeJS.Timeout[] = [];
 
-      for (let i = 0; i < 3; i++) {
-        const remaining = availableIndices.filter(idx => !newIndices.includes(idx));
-        const randomIndex = Math.floor(Math.random() * remaining.length);
-        newIndices.push(remaining[randomIndex]);
-      }
+    [0, 1, 2].forEach((slotIndex) => {
+      const delay = slotIndex * 1000;
+      const timer = setTimeout(() => {
+        const intervalTimer = setInterval(() => {
+          const usedIndices = currentIndices.filter((_, i) => i !== slotIndex);
+          const availableIndices = Array.from({ length: images.length }, (_, i) => i).filter(
+            (idx) => !usedIndices.includes(idx)
+          );
+          const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
 
-      setNextIndices(newIndices);
-      setIsTransitioning(true);
+          setNextIndices((prev) => {
+            const newIndices = [...prev];
+            newIndices[slotIndex] = randomIndex;
+            return newIndices;
+          });
 
-      setTimeout(() => {
-        setCurrentIndices(newIndices);
-        setIsTransitioning(false);
-      }, 400);
-    }, interval);
+          setTransitioning((prev) => {
+            const newTransitioning = [...prev];
+            newTransitioning[slotIndex] = true;
+            return newTransitioning;
+          });
 
-    return () => clearInterval(timer);
+          setTimeout(() => {
+            setCurrentIndices((prev) => {
+              const newIndices = [...prev];
+              newIndices[slotIndex] = randomIndex;
+              return newIndices;
+            });
+
+            setTransitioning((prev) => {
+              const newTransitioning = [...prev];
+              newTransitioning[slotIndex] = false;
+              return newTransitioning;
+            });
+          }, 400);
+        }, interval);
+
+        timers.push(intervalTimer);
+      }, delay);
+
+      timers.push(timer);
+    });
+
+    return () => timers.forEach((timer) => clearTimeout(timer) || clearInterval(timer));
   }, [images.length, interval]);
 
   return (
@@ -58,7 +84,7 @@ export const FadingImageGallery = ({
             src={images[nextIndices[slotIndex]].src}
             alt={images[nextIndices[slotIndex]].alt}
             style={{
-              opacity: isTransitioning ? 1 : 0,
+              opacity: transitioning[slotIndex] ? 1 : 0,
               transition: "opacity 0.4s ease-in-out",
             }}
           />
