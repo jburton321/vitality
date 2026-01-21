@@ -581,12 +581,24 @@ input,
   position: relative;
 }
 
+.-top-12{
+  top: -3rem;
+}
+
+.left-1\/2{
+  left: 50%;
+}
+
 .left-\[50\%\]{
   left: 50%;
 }
 
 .top-\[50\%\]{
   top: 50%;
+}
+
+.z-10{
+  z-index: 10;
 }
 
 .mx-auto{
@@ -796,6 +808,11 @@ input,
 
 .shrink-0{
   flex-shrink: 0;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform{
@@ -1082,11 +1099,6 @@ input,
   padding-bottom: 0.75rem;
 }
 
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1102,6 +1114,10 @@ input,
 
 .pb-3{
   padding-bottom: 0.75rem;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
 }
 
 .pb-6{
@@ -1402,6 +1418,14 @@ input,
 }
 
 @media (min-width: 430px){
+  .sm\:-top-14{
+    top: -3.5rem;
+  }
+
+  .sm\:left-8{
+    left: 2rem;
+  }
+
   .sm\:mt-4{
     margin-top: 1rem;
   }
@@ -1452,6 +1476,11 @@ input,
 
   .sm\:flex-1{
     flex: 1 1 0%;
+  }
+
+  .sm\:translate-x-0{
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .sm\:flex-row{
@@ -1545,9 +1574,16 @@ input,
     padding-bottom: 1rem;
   }
 
-  .sm\:py-6{
-    padding-top: 1.5rem;
+  .sm\:pb-6{
     padding-bottom: 1.5rem;
+  }
+
+  .sm\:pl-32{
+    padding-left: 8rem;
+  }
+
+  .sm\:pt-20{
+    padding-top: 5rem;
   }
 
   .sm\:pt-8{
@@ -1560,6 +1596,14 @@ input,
 }
 
 @media (min-width: 768px){
+  .md\:-top-16{
+    top: -4rem;
+  }
+
+  .md\:left-12{
+    left: 3rem;
+  }
+
   .md\:h-32{
     height: 8rem;
   }
@@ -1581,9 +1625,21 @@ input,
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+
+  .md\:pl-40{
+    padding-left: 10rem;
+  }
+
+  .md\:pt-24{
+    padding-top: 6rem;
+  }
 }
 
 @media (min-width: 1024px){
+  .lg\:left-\[calc\(50\%-560px\+24px\)\]{
+    left: calc(50% - 560px + 24px);
+  }
+
   .lg\:block{
     display: block;
   }
