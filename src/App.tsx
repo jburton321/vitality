@@ -8,7 +8,7 @@ import { Footer } from "./components/Footer";
 export default function App() {
   return (
     <div className="min-h-screen">
-      <div className="bg-white flex flex-col gap-0 justify-start overflow-hidden relative z-10">
+      <div className="bg-white flex flex-col gap-0 justify-start relative z-10">
         <Navbar />
         <div className="sm:hidden w-full relative">
           <img
