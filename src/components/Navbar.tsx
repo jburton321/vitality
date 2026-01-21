@@ -2,7 +2,7 @@ import { Phone } from "lucide-react";
 
 export const Navbar = (): JSX.Element => {
   return (
-    <>
+    <div className="sticky top-0 z-50 shadow-sm">
       <header className="bg-white">
         <div className="w-full max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row items-center sm:justify-between px-4 sm:px-6 py-3 sm:py-4 gap-2 sm:gap-0">
@@ -48,6 +48,6 @@ export const Navbar = (): JSX.Element => {
           <span className="text-white">%PHONE%</span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
