@@ -601,11 +601,6 @@ input,
   position: relative;
 }
 
-.sticky{
-  position: -webkit-sticky;
-  position: sticky;
-}
-
 .-bottom-16{
   bottom: -4rem;
 }
@@ -1647,8 +1642,16 @@ input,
   transition-duration: 500ms;
 }
 
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .ease-out{
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.will-change-transform{
+  will-change: transform;
 }
 
 .text-fluid-xs {
@@ -1905,6 +1908,10 @@ input,
 
   .sm\:h-5{
     height: 1.25rem;
+  }
+
+  .sm\:h-\[64px\]{
+    height: 64px;
   }
 
   .sm\:h-auto{

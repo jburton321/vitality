@@ -13,10 +13,11 @@ export const Navbar = (): JSX.Element => {
 
       if (currentScrollY < 10) {
         setIsVisible(true);
-      } else if (scrollDelta < -scrollThreshold) {
-        setIsVisible(false);
         lastScrollY.current = currentScrollY;
       } else if (scrollDelta > scrollThreshold) {
+        setIsVisible(false);
+        lastScrollY.current = currentScrollY;
+      } else if (scrollDelta < -scrollThreshold) {
         setIsVisible(true);
         lastScrollY.current = currentScrollY;
       }
@@ -28,7 +29,7 @@ export const Navbar = (): JSX.Element => {
 
   return (
     <div
-      className={`sticky top-0 z-50 shadow-sm transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 shadow-sm transition-transform duration-300 ease-in-out will-change-transform ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
