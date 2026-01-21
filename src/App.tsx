@@ -18,7 +18,7 @@ export default function App() {
         <img
           src="/stamp.png"
           alt="Future of Travel Focus Group"
-          className="absolute left-1/2 -translate-x-1/2 -bottom-12 w-24 h-24 z-10"
+          className="absolute left-1/2 -translate-x-1/2 -bottom-16 w-32 h-32 z-10"
         />
       </div>
       <main className="w-full flex flex-col items-center flex-1">

@@ -1,6 +1,6 @@
 export const Hero = (): JSX.Element => {
   return (
-    <section className="w-full bg-gradient-to-r from-blue-900 to-blue-600 px-4 sm:px-6 pt-16 sm:pt-4 pb-4 sm:py-6">
+    <section className="w-full bg-gradient-to-r from-blue-900 to-blue-600 px-4 sm:px-6 pt-20 sm:pt-4 pb-4 sm:py-6">
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-start max-w-7xl mx-auto">
         <img
           src="/stamp.png"
