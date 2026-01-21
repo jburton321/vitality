@@ -4,20 +4,22 @@ import { useState, useEffect, useRef } from "react";
 export const Navbar = (): JSX.Element => {
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
+  const scrollThreshold = 10;
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - lastScrollY.current;
 
       if (currentScrollY < 10) {
         setIsVisible(true);
-      } else if (currentScrollY < lastScrollY.current) {
+      } else if (scrollDelta < -scrollThreshold) {
         setIsVisible(false);
-      } else if (currentScrollY > lastScrollY.current) {
+        lastScrollY.current = currentScrollY;
+      } else if (scrollDelta > scrollThreshold) {
         setIsVisible(true);
+        lastScrollY.current = currentScrollY;
       }
-
-      lastScrollY.current = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
