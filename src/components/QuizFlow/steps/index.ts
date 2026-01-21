@@ -1,0 +1,10 @@
+export { StepAge } from "./StepAge";
+export { StepTravel } from "./StepTravel";
+export { StepNames } from "./StepNames";
+export { StepHousing } from "./StepHousing";
+export { StepJob } from "./StepJob";
+export { StepPayment } from "./StepPayment";
+export { StepQualification } from "./StepQualification";
+export { StepAcknowledgement } from "./StepAcknowledgement";
+export { StepScheduler } from "./StepScheduler";
+export { StepThankYou } from "./StepThankYou";

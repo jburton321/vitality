@@ -1,11 +1,31 @@
+import { useState } from "react";
 import "./styles.css";
 import "./tailwind.css";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Survey } from "./components/Survey";
 import { Footer } from "./components/Footer";
+import { QuizFlow } from "./components/QuizFlow";
+
+type View = "home" | "quiz";
 
 export default function App() {
+  const [currentView, setCurrentView] = useState<View>("home");
+
+  const handleStartQuiz = () => {
+    setCurrentView("quiz");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleBackToHome = () => {
+    setCurrentView("home");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  if (currentView === "quiz") {
+    return <QuizFlow onBack={handleBackToHome} />;
+  }
+
   return (
     <div className="min-h-screen">
       <div className="bg-white flex flex-col gap-0 justify-start relative z-10">
@@ -23,8 +43,8 @@ export default function App() {
           />
         </div>
         <main className="w-full flex flex-col items-center flex-1">
-          <Hero />
-          <Survey />
+          <Hero onStartClick={handleStartQuiz} />
+          <Survey onStartClick={handleStartQuiz} />
         </main>
       </div>
       <Footer />

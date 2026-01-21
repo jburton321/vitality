@@ -1,7 +1,11 @@
 import { Clock } from "lucide-react";
 import { ButtonPrimaryStateV1 } from "../ButtonPrimaryStateV1/ButtonPrimaryStateV1";
 
-export const Survey = (): JSX.Element => {
+interface SurveyProps {
+  onStartClick?: () => void;
+}
+
+export const Survey = ({ onStartClick }: SurveyProps): JSX.Element => {
   return (
     <section
       className="py-8 sm:py-12 flex flex-col gap-2 items-center justify-center w-full"
@@ -90,7 +94,7 @@ export const Survey = (): JSX.Element => {
                   </div>
                   <div className="bg-white flex-1 h-0.5 sm:h-1"></div>
                 </div>
-                <ButtonPrimaryStateV1 className="!bg-yellow-400 !w-full !min-h-[44px] sm:!h-14"></ButtonPrimaryStateV1>
+                <ButtonPrimaryStateV1 className="!bg-yellow-400 !w-full !min-h-[44px] sm:!h-14" onClick={onStartClick} />
               </div>
             </div>
           </article>

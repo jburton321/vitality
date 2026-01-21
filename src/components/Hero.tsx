@@ -1,6 +1,10 @@
 import { ButtonPrimaryStateV1 } from "../ButtonPrimaryStateV1/ButtonPrimaryStateV1";
 
-export const Hero = (): JSX.Element => {
+interface HeroProps {
+  onStartClick?: () => void;
+}
+
+export const Hero = ({ onStartClick }: HeroProps): JSX.Element => {
   return (
     <section className="w-full bg-gradient-to-r from-blue-900 to-blue-600 px-4 sm:px-6 pt-20 sm:pt-4 pb-4 sm:py-6">
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-start max-w-7xl mx-auto">
@@ -33,7 +37,7 @@ export const Hero = (): JSX.Element => {
           </div>
         </div>
         <div className="w-full sm:w-auto shrink-0 mt-2 sm:mt-0">
-          <ButtonPrimaryStateV1 text="START NOW" state="mobile" className="w-full sm:w-auto sm:state-v-1" />
+          <ButtonPrimaryStateV1 text="START NOW" state="mobile" className="w-full sm:w-auto sm:state-v-1" onClick={onStartClick} />
         </div>
       </div>
     </section>
