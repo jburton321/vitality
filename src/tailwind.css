@@ -766,6 +766,10 @@ input,
   height: 124.67px;
 }
 
+.h-\[160px\]{
+  height: 160px;
+}
+
 .h-\[22\.09px\]{
   height: 22.09px;
 }
@@ -1911,8 +1915,8 @@ input,
     height: 1.25rem;
   }
 
-  .sm\:h-\[64px\]{
-    height: 64px;
+  .sm\:h-\[80px\]{
+    height: 80px;
   }
 
   .sm\:w-36{
