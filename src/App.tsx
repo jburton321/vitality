@@ -7,7 +7,7 @@ import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="bg-white flex flex-col gap-0 items-center justify-start overflow-hidden">
+    <div className="bg-white flex flex-col gap-0 justify-start overflow-hidden">
       <Navbar />
       <div className="sm:hidden w-full">
         <img
@@ -16,7 +16,7 @@ export default function App() {
           className="w-full h-auto object-cover"
         />
       </div>
-      <main className="w-full">
+      <main className="w-full flex flex-col items-center">
         <Hero />
         <Survey />
       </main>
