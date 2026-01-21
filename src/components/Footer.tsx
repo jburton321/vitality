@@ -1,4 +1,4 @@
-const FOOTER_HEIGHT = "180px";
+const FOOTER_HEIGHT = "220px";
 
 export const Footer = (): JSX.Element => {
   return (
