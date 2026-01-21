@@ -17,6 +17,7 @@ export const StepPayment = ({ value, onSelect }: StepPaymentProps): JSX.Element 
       options={paymentOptions}
       selectedValue={value}
       onSelect={onSelect}
+      image="/step6.png"
     />
   );
 };

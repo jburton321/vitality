@@ -18,6 +18,7 @@ export const StepJob = ({ value, onSelect }: StepJobProps): JSX.Element => {
       options={jobOptions}
       selectedValue={value}
       onSelect={onSelect}
+      image="/step5.png"
     />
   );
 };

@@ -19,6 +19,7 @@ export const StepAge = ({ value, onSelect }: StepAgeProps): JSX.Element => {
       options={ageOptions}
       selectedValue={value}
       onSelect={onSelect}
+      image="/step1.png"
     />
   );
 };

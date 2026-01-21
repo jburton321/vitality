@@ -10,11 +10,21 @@ interface MultiChoiceProps {
   options: MultiChoiceOption[];
   selectedValue: string;
   onSelect: (value: string) => void;
+  image?: string;
 }
 
-export const MultiChoice = ({ title, options, selectedValue, onSelect }: MultiChoiceProps): JSX.Element => {
+export const MultiChoice = ({ title, options, selectedValue, onSelect, image }: MultiChoiceProps): JSX.Element => {
   return (
-    <div className="flex flex-col gap-4 items-center w-full">
+    <div className="flex flex-col gap-6 items-center w-full">
+      {image && (
+        <div className="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
+          <img
+            src={image}
+            alt="Step illustration"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      )}
       <h2
         className="text-blue-900 text-center font-bold text-fluid-2xl uppercase"
         style={{ fontFamily: "Montserrat-Bold, sans-serif" }}
