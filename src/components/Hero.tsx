@@ -16,7 +16,7 @@ export const Hero = (): JSX.Element => {
             <div className="text-white font-bold text-5xl leading-none uppercase" style={{ fontFamily: "Montserrat-Bold, sans-serif" }}>
               VACATION
             </div>
-            <div className="text-white text-[38px] leading-none font-normal" style={{ fontFamily: "Brinattan-Regular, sans-serif" }}>
+            <div className="text-white text-[38px] leading-none font-normal" style={{ fontFamily: "'Dancing Script', 'Brinattan-Regular', cursive" }}>
               For Two!
             </div>
           </div>
