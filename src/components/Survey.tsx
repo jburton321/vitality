@@ -1,5 +1,6 @@
 import { Clock } from "lucide-react";
 import { ButtonPrimaryStateV1 } from "../ButtonPrimaryStateV1/ButtonPrimaryStateV1";
+import { FadingImageGallery } from "./FadingImageGallery";
 
 interface SurveyProps {
   onStartClick?: () => void;
@@ -60,26 +61,17 @@ export const Survey = ({ onStartClick }: SurveyProps): JSX.Element => {
                   Choose from U.S., Canada, or Mexico destinations
                 </div>
               </div>
-              <div
-                className="bg-white bg-opacity-35 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-start w-full mt-3 sm:mt-4"
-                style={{ backdropFilter: "blur(15px)" }}
-              >
-                <img
-                  className="rounded-lg sm:rounded-xl w-full sm:flex-1 aspect-destination object-cover"
-                  src="rectangle-60.png"
-                  alt="Destination 1"
-                />
-                <img
-                  className="rounded-lg sm:rounded-xl w-full sm:flex-1 aspect-destination object-cover"
-                  src="rectangle-239010.png"
-                  alt="Destination 2"
-                />
-                <img
-                  className="rounded-lg sm:rounded-xl w-full sm:flex-1 aspect-destination object-cover"
-                  src="rectangle-239020.png"
-                  alt="Destination 3"
-                />
-              </div>
+              <FadingImageGallery
+                images={[
+                  { src: "/rectangle-60.png", alt: "Times Square destination" },
+                  { src: "/rectangle0.png", alt: "Mountain lake destination" },
+                  { src: "/rectangle-239010.png", alt: "Historic pyramid destination" },
+                  { src: "/rectangle-239020.png", alt: "Beach resort destination" },
+                  { src: "/frame-4273216650.png", alt: "Sunset beach destination" },
+                  { src: "/frame-4273216680.png", alt: "Coastal resort destination" },
+                ]}
+                interval={4000}
+              />
               <div className="pt-6 sm:pt-8 flex flex-col gap-4 sm:gap-5 items-start justify-start w-full">
                 <div className="flex flex-row gap-2 items-center justify-center w-full">
                   <div className="bg-white flex-1 h-0.5 sm:h-1"></div>
