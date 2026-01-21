@@ -656,16 +656,8 @@ video {
   height: auto;
 }
 
-.h-full{
-  height: 100%;
-}
-
 .min-h-\[620px\]{
   min-height: 620px;
-}
-
-.min-h-full{
-  min-height: 100%;
 }
 
 .\!w-full{
@@ -1373,8 +1365,8 @@ video {
 }
 
 @media (min-width: 1024px){
-  .lg\:flex{
-    display: flex;
+  .lg\:block{
+    display: block;
   }
 
   .lg\:flex-row{

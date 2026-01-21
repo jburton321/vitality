@@ -14,7 +14,7 @@ export const Survey = (): JSX.Element => {
       <div className="flex flex-col gap-0 items-center justify-start w-full max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col lg:flex-row gap-0 items-stretch justify-start w-full">
           <article
-            className="bg-gray-100 bg-opacity-75 py-12 sm:py-16 px-6 sm:px-12 flex flex-col gap-8 items-center justify-center flex-1 min-h-full"
+            className="bg-gray-100 bg-opacity-75 py-12 sm:py-16 px-6 sm:px-12 flex flex-col gap-8 items-center justify-center flex-1"
             style={{ backdropFilter: "blur(30px)" }}
           >
             <div className="flex flex-col gap-0 items-center justify-start w-full">
@@ -77,7 +77,7 @@ export const Survey = (): JSX.Element => {
             </div>
           </article>
           <img
-            className="hidden lg:flex flex-row gap-2 items-center justify-center flex-1 h-full min-h-full object-cover"
+            className="hidden lg:block flex-1 w-full self-stretch object-cover"
             src="frame-4273216650.png"
             alt="Vacation imagery"
           />
