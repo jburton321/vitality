@@ -14,7 +14,7 @@ export const Hero = (): JSX.Element => {
             className="text-fluid-hero leading-none uppercase"
             style={{ letterSpacing: "0.03em" }}
           >
-            <span className="text-yellow-400">Complimentary </span>
+            <span className="text-yellow-400 block sm:inline mb-1 sm:mb-0">Complimentary</span>
             <span className="text-white">3-DAY/2-NIGHT</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 items-center justify-start">
