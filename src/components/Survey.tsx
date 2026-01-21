@@ -6,7 +6,7 @@ export const Survey = (): JSX.Element => {
     <section
       className="py-12 flex flex-col gap-2 items-center justify-center w-full"
       style={{
-        background: "url(/frame-4273216680.png) center",
+        background: "url(/bck.jpg) center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
