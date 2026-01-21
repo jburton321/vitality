@@ -22,10 +22,10 @@ export const ButtonPrimaryStateV1 = ({
         variantsClassName
       }
     >
-      <span className="btn-pulse-line btn-pulse-line-top"></span>
-      <span className="btn-pulse-line btn-pulse-line-right"></span>
-      <span className="btn-pulse-line btn-pulse-line-bottom"></span>
-      <span className="btn-pulse-line btn-pulse-line-left"></span>
+      <span className="btn-pulse-line btn-pulse-line-top absolute pointer-events-none"></span>
+      <span className="btn-pulse-line btn-pulse-line-right absolute pointer-events-none"></span>
+      <span className="btn-pulse-line btn-pulse-line-bottom absolute pointer-events-none"></span>
+      <span className="btn-pulse-line btn-pulse-line-left absolute pointer-events-none"></span>
       <span className="text-[#ffffff] text-center font-['Montserrat-Bold',_sans-serif] text-fluid-xl leading-none font-bold uppercase relative z-10">
         {text}
       </span>

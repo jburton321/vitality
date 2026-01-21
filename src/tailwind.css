@@ -573,6 +573,10 @@ input,
   }
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
 .absolute{
   position: absolute;
 }
