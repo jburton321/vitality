@@ -183,7 +183,7 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
     <div className="min-h-screen">
       <div className="bg-white flex flex-col gap-0 justify-start relative z-10">
         <Navbar />
-        <div className="sm:hidden w-full relative">
+        <div className="md:hidden w-full relative">
           <img
             src="/frame-4273216650.png"
             alt="Beach sunset"
@@ -196,22 +196,22 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
           />
         </div>
         <main className="w-full flex flex-col items-center flex-1">
-          <section className="w-full bg-gradient-to-r from-blue-900 to-blue-600 px-4 sm:px-6 pt-20 sm:pt-4 pb-4 sm:py-6">
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-start max-w-7xl mx-auto">
+          <section className="w-full bg-gradient-to-r from-blue-900 to-blue-600 px-4 sm:px-6 pt-20 md:pt-4 pb-4 md:py-6">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center justify-start max-w-7xl mx-auto">
               <img
                 src="/stamp.png"
                 alt="Future of Travel Focus Group"
-                className="hidden sm:block w-28 h-28 md:w-32 md:h-32 shrink-0 object-contain"
+                className="hidden md:block w-28 h-28 md:w-32 md:h-32 shrink-0 object-contain"
               />
-              <div className="flex flex-col gap-1 sm:gap-2 items-center sm:items-start justify-start flex-1 text-center sm:text-left">
+              <div className="flex flex-col gap-1 md:gap-2 items-center md:items-start justify-start flex-1 text-center md:text-left">
                 <div
                   className="text-fluid-hero leading-none uppercase"
                   style={{ letterSpacing: "0.03em" }}
                 >
-                  <span className="text-yellow-400 block sm:inline mb-1 sm:mb-0">Complimentary</span>
+                  <span className="text-yellow-400 block md:inline mb-1 md:mb-0">Complimentary</span>
                   <span className="text-white"> 3-DAY/2-NIGHT</span>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 items-center justify-start">
+                <div className="flex flex-col md:flex-row gap-1 md:gap-4 items-center justify-start">
                   <div
                     className="text-white font-bold text-fluid-hero-title leading-none uppercase"
                     style={{ fontFamily: "Montserrat-Bold, sans-serif" }}
@@ -238,9 +238,9 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
             }}
           >
             <div className="flex flex-col gap-0 items-center justify-start w-full max-w-7xl px-4 sm:px-6">
-              <div className="flex flex-col lg:flex-row-reverse gap-0 items-stretch justify-start w-full">
+              <div className="flex flex-col md:flex-row gap-0 items-stretch justify-start w-full">
                 <article
-                  className="bg-gray-100 bg-opacity-75 py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 flex flex-col gap-6 sm:gap-8 items-center justify-start flex-1 order-1 lg:order-2"
+                  className="bg-gray-100 bg-opacity-75 py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 flex flex-col gap-6 sm:gap-8 items-center justify-start flex-1"
                   style={{ backdropFilter: "blur(30px)" }}
                 >
                   <StepContainer step={currentStep} totalSteps={totalSteps}>
@@ -290,7 +290,7 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
                   )}
                 </article>
                 <img
-                  className="hidden lg:block flex-1 w-full self-stretch object-cover order-2 lg:order-1"
+                  className="hidden md:block flex-1 w-full self-stretch object-cover"
                   src="/frame-4273216650.png"
                   alt="Vacation imagery"
                 />
