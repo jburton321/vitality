@@ -643,6 +643,10 @@ input,
   margin-right: auto;
 }
 
+.mt-2{
+  margin-top: 0.5rem;
+}
+
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -1566,6 +1570,10 @@ input,
 }
 
 @media (min-width: 430px){
+  .sm\:mt-0{
+    margin-top: 0px;
+  }
+
   .sm\:mt-4{
     margin-top: 1rem;
   }

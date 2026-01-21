@@ -32,8 +32,8 @@ export const Hero = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div className="hidden sm:block shrink-0">
-          <ButtonPrimaryStateV1 text="START NOW" />
+        <div className="shrink-0 mt-2 sm:mt-0">
+          <ButtonPrimaryStateV1 text="START NOW" state="mobile" className="sm:state-v-1" />
         </div>
       </div>
     </section>
