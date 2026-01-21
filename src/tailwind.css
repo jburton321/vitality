@@ -1347,6 +1347,16 @@ input,
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
+}
+
 .text-fluid-xs {
   font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
 }
@@ -1415,6 +1425,96 @@ input,
   font-weight: normal;
 
   font-style: normal;
+}
+
+.btn-pulse {
+  position: relative;
+}
+
+.btn-pulse:hover {
+  background-color: #FB914F !important;
+}
+
+.btn-pulse-line {
+  position: absolute;
+  background: #FB914F;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-pulse-line-top,
+.btn-pulse-line-bottom {
+  height: 3px;
+  width: 100%;
+  left: 0;
+}
+
+.btn-pulse-line-left,
+.btn-pulse-line-right {
+  width: 3px;
+  height: 100%;
+  top: 0;
+}
+
+.btn-pulse-line-top {
+  top: 0;
+}
+
+.btn-pulse-line-bottom {
+  bottom: 0;
+}
+
+.btn-pulse-line-left {
+  left: 0;
+}
+
+.btn-pulse-line-right {
+  right: 0;
+}
+
+.btn-pulse:hover .btn-pulse-line {
+  opacity: 1;
+  animation: pulse-line 1s ease-in-out infinite;
+}
+
+.btn-pulse:hover .btn-pulse-line-top {
+  animation: pulse-horizontal 1s ease-in-out infinite;
+}
+
+.btn-pulse:hover .btn-pulse-line-bottom {
+  animation: pulse-horizontal 1s ease-in-out infinite reverse;
+}
+
+.btn-pulse:hover .btn-pulse-line-left {
+  animation: pulse-vertical 1s ease-in-out infinite;
+}
+
+.btn-pulse:hover .btn-pulse-line-right {
+  animation: pulse-vertical 1s ease-in-out infinite reverse;
+}
+
+@keyframes pulse-horizontal {
+  0%, 100% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes pulse-vertical {
+  0%, 100% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
 }
 
 @media (min-width: 430px){
