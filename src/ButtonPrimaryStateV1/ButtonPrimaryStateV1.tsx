@@ -13,17 +13,18 @@ export const ButtonPrimaryStateV1 = ({
   const variantsClassName = "state-" + state;
 
   return (
-    <div
+    <button
+      type="button"
       className={
-        "bg-gold-500 pt-4 pr-12 pb-4 pl-12 flex flex-row gap-2.5 items-center justify-center relative " +
+        "bg-gold-500 py-3 sm:py-4 px-8 sm:px-12 flex flex-row gap-2.5 items-center justify-center relative min-h-[44px] cursor-pointer touch-target " +
         className +
         " " +
         variantsClassName
       }
     >
-      <div className="text-[#ffffff] text-center font-['Montserrat-Bold',_sans-serif] text-xl leading-none font-bold uppercase relative">
-        {text}{" "}
-      </div>
-    </div>
+      <span className="text-[#ffffff] text-center font-['Montserrat-Bold',_sans-serif] text-fluid-xl leading-none font-bold uppercase relative">
+        {text}
+      </span>
+    </button>
   );
 };
