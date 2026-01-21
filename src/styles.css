@@ -3,4 +3,11 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Brinattan-Regular';
+  src: url('./brinattan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
       

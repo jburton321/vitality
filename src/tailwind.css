@@ -1314,6 +1314,16 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+@font-face {
+  font-family: 'Brinattan-Regular';
+
+  src: url('./brinattan.ttf') format('truetype');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
 @media (min-width: 640px) {
   .sm\:h-28 {
     height: 7rem;
