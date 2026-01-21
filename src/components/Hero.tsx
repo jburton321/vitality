@@ -30,6 +30,12 @@ export const Hero = (): JSX.Element => {
             </div>
           </div>
         </div>
+        <button
+          className="hidden sm:block shrink-0 bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 px-6 rounded-lg text-sm uppercase tracking-wide transition-colors duration-200"
+          style={{ fontFamily: "Montserrat-Bold, sans-serif" }}
+        >
+          Claim Now
+        </button>
       </div>
     </section>
   );
