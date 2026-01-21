@@ -32,7 +32,7 @@ export const Survey = (): JSX.Element => {
                   <br />
                   our Future of Travel
                 </div>
-                <div className="text-blue-900 text-center text-5xl font-normal" style={{ fontFamily: "'Dancing Script', 'Brinattan-Regular', cursive" }}>
+                <div className="text-blue-900 text-center text-5xl font-normal" style={{ fontFamily: "'Brinattan-Regular', cursive" }}>
                   Couple&#039;s Focus Group
                 </div>
               </div>
