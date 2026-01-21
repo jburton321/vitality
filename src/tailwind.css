@@ -1422,8 +1422,8 @@ input,
 }
 
 @media (min-width: 430px){
-  .sm\:-top-14{
-    top: -3.5rem;
+  .sm\:-top-12{
+    top: -3rem;
   }
 
   .sm\:left-8{
@@ -1600,8 +1600,8 @@ input,
 }
 
 @media (min-width: 768px){
-  .md\:-top-16{
-    top: -4rem;
+  .md\:-top-12{
+    top: -3rem;
   }
 
   .md\:left-12{
