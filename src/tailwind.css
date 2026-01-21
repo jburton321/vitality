@@ -1317,7 +1317,7 @@ video {
 @font-face {
   font-family: 'Brinattan-Regular';
 
-  src: url('./brinattan.ttf') format('truetype');
+  src: url('/brinattan.ttf') format('truetype');
 
   font-weight: normal;
 
