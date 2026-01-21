@@ -125,6 +125,7 @@ export const LpD = ({ className, ...props }: ILpDProps): JSX.Element => {
                   <span className="complimentary-3-day-2-night-span">
                     Complimentary
                   </span>
+                  <br />
                   <span className="complimentary-3-day-2-night-span2">
                     3-DAY/2-NIGHT
                   </span>
