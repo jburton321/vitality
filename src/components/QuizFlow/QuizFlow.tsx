@@ -239,6 +239,11 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
           >
             <div className="flex flex-col gap-0 items-center justify-start w-full max-w-7xl px-4 sm:px-6">
               <div className="flex flex-col md:flex-row gap-0 items-stretch justify-start w-full">
+                <img
+                  className="hidden md:block flex-1 w-full self-stretch object-cover"
+                  src="/frame-4273216650.png"
+                  alt="Vacation imagery"
+                />
                 <article
                   className="bg-gray-100 bg-opacity-75 py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 flex flex-col gap-6 sm:gap-8 items-center justify-start flex-1"
                   style={{ backdropFilter: "blur(30px)" }}
@@ -289,11 +294,6 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
                     </div>
                   )}
                 </article>
-                <img
-                  className="hidden md:block flex-1 w-full self-stretch object-cover"
-                  src="/frame-4273216650.png"
-                  alt="Vacation imagery"
-                />
               </div>
             </div>
           </section>
