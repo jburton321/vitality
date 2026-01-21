@@ -601,6 +601,10 @@ input,
   position: relative;
 }
 
+.inset-0{
+  inset: 0px;
+}
+
 .-bottom-16{
   bottom: -4rem;
 }

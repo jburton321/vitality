@@ -12,26 +12,26 @@ export const FadingImageGallery = ({
   className = "",
 }: FadingImageGalleryProps): JSX.Element => {
   const [currentIndices, setCurrentIndices] = useState<number[]>([0, 1, 2]);
-  const [opacity, setOpacity] = useState(1);
+  const [nextIndices, setNextIndices] = useState<number[]>([0, 1, 2]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setOpacity(0);
+      const availableIndices = Array.from({ length: images.length }, (_, i) => i);
+      const newIndices: number[] = [];
+
+      for (let i = 0; i < 3; i++) {
+        const remaining = availableIndices.filter(idx => !newIndices.includes(idx));
+        const randomIndex = Math.floor(Math.random() * remaining.length);
+        newIndices.push(remaining[randomIndex]);
+      }
+
+      setNextIndices(newIndices);
+      setIsTransitioning(true);
 
       setTimeout(() => {
-        setCurrentIndices((prev) => {
-          const availableIndices = Array.from({ length: images.length }, (_, i) => i);
-          const newIndices: number[] = [];
-
-          for (let i = 0; i < 3; i++) {
-            const remaining = availableIndices.filter(idx => !newIndices.includes(idx));
-            const randomIndex = Math.floor(Math.random() * remaining.length);
-            newIndices.push(remaining[randomIndex]);
-          }
-
-          return newIndices;
-        });
-        setOpacity(1);
+        setCurrentIndices(newIndices);
+        setIsTransitioning(false);
       }, 500);
     }, interval);
 
@@ -43,17 +43,30 @@ export const FadingImageGallery = ({
       className={`bg-white bg-opacity-35 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-start w-full mt-3 sm:mt-4 ${className}`}
       style={{ backdropFilter: "blur(15px)" }}
     >
-      {currentIndices.map((imageIndex, idx) => (
-        <img
-          key={idx}
-          className="rounded-lg sm:rounded-xl w-full sm:flex-1 aspect-destination object-cover"
-          src={images[imageIndex].src}
-          alt={images[imageIndex].alt}
-          style={{
-            opacity,
-            transition: "opacity 0.5s ease-in-out",
-          }}
-        />
+      {[0, 1, 2].map((slotIndex) => (
+        <div
+          key={slotIndex}
+          className="rounded-lg sm:rounded-xl w-full sm:flex-1 aspect-destination relative overflow-hidden"
+        >
+          <img
+            className="absolute inset-0 w-full h-full object-cover rounded-lg sm:rounded-xl"
+            src={images[currentIndices[slotIndex]].src}
+            alt={images[currentIndices[slotIndex]].alt}
+            style={{
+              opacity: isTransitioning ? 0 : 1,
+              transition: "opacity 0.5s ease-in-out",
+            }}
+          />
+          <img
+            className="absolute inset-0 w-full h-full object-cover rounded-lg sm:rounded-xl"
+            src={images[nextIndices[slotIndex]].src}
+            alt={images[nextIndices[slotIndex]].alt}
+            style={{
+              opacity: isTransitioning ? 1 : 0,
+              transition: "opacity 0.5s ease-in-out",
+            }}
+          />
+        </div>
       ))}
     </div>
   );
