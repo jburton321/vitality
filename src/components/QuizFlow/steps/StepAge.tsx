@@ -15,7 +15,7 @@ const ageOptions = [
 export const StepAge = ({ value, onSelect }: StepAgeProps): JSX.Element => {
   return (
     <MultiChoice
-      title="What is your age?"
+      title="Select Your Age Range"
       options={ageOptions}
       selectedValue={value}
       onSelect={onSelect}

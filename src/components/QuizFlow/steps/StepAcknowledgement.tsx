@@ -9,42 +9,38 @@ interface Acknowledgements {
 interface StepAcknowledgementProps {
   acknowledgements: Acknowledgements;
   onAcknowledgementChange: (key: keyof Acknowledgements, value: boolean) => void;
+  firstName: string;
 }
 
 const acknowledgementItems = [
   {
     key: "attendWithSpouse" as const,
-    label: "I confirm that I will attend the presentation with my spouse/partner.",
+    label: "I will attend the session with my spouse/partner.",
   },
   {
     key: "completeSession" as const,
-    label: "I agree to complete the full 90-minute presentation session.",
+    label: "I understand the full session must be completed to receive my travel certificate.",
   },
   {
     key: "meetCriteria" as const,
-    label: "I confirm that I meet all eligibility criteria for this program.",
+    label: "I meet the program criteria: over 30, coupled, and a primary credit card holder.",
   },
 ];
 
 export const StepAcknowledgement = ({
   acknowledgements,
   onAcknowledgementChange,
+  firstName,
 }: StepAcknowledgementProps): JSX.Element => {
   return (
     <div className="flex flex-col gap-6 items-center w-full">
       <div className="text-center">
         <h2
-          className="text-blue-900 text-center font-bold text-fluid-2xl uppercase mb-2"
+          className="text-blue-900 text-center font-bold text-fluid-3xl uppercase mb-2"
           style={{ fontFamily: "Montserrat-Bold, sans-serif" }}
         >
-          Almost There!
+          Thank You, {firstName || "Guest"}!
         </h2>
-        <p
-          className="text-gray-600 text-fluid-base"
-          style={{ fontFamily: "Montserrat-Regular, sans-serif" }}
-        >
-          Please confirm the following to proceed with your booking
-        </p>
       </div>
 
       <div className="flex flex-col gap-4 w-full max-w-md">

@@ -1,4 +1,4 @@
-import { Check, Gift, Calendar, MapPin, Users } from "lucide-react";
+import { Check, Clock, Video, Calendar } from "lucide-react";
 
 interface StepQualificationProps {
   firstName: string;
@@ -14,10 +14,9 @@ interface StepQualificationProps {
 }
 
 const benefits = [
-  { icon: Gift, text: "Complimentary 3-Day/2-Night Vacation" },
-  { icon: MapPin, text: "Choose from U.S., Canada, or Mexico" },
-  { icon: Users, text: "Exclusive Focus Group Experience" },
-  { icon: Calendar, text: "Flexible Scheduling Options" },
+  { text: "Session Length: 30-45 minutes" },
+  { text: "Hosted online" },
+  { text: "Easy to schedule" },
 ];
 
 export const StepQualification = ({
@@ -35,34 +34,25 @@ export const StepQualification = ({
   return (
     <div className="flex flex-col gap-6 items-center w-full">
       <div className="text-center">
-        <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full mb-4">
-          <Check className="w-5 h-5" />
-          <span
-            className="font-semibold text-fluid-base"
-            style={{ fontFamily: "Montserrat-SemiBold, sans-serif" }}
-          >
-            Congratulations!
-          </span>
-        </div>
         <h2
-          className="text-blue-900 text-center font-bold text-fluid-3xl uppercase"
+          className="text-blue-900 text-center font-bold text-fluid-3xl uppercase mb-3"
           style={{ fontFamily: "Montserrat-Bold, sans-serif" }}
         >
           You Qualify to Participate
         </h2>
+        <p
+          className="text-gray-700 text-fluid-base max-w-md mx-auto"
+          style={{ fontFamily: "Montserrat-Regular, sans-serif" }}
+        >
+          Complete the survey and attend a short online session and you'll receive a complimentary 3-Day, 2-Night Vacation.
+        </p>
       </div>
 
-      <div className="w-full max-w-md bg-blue-50 rounded-xl p-4">
-        <h3
-          className="text-blue-900 font-semibold text-fluid-base mb-3"
-          style={{ fontFamily: "Montserrat-SemiBold, sans-serif" }}
-        >
-          Your Benefits Include:
-        </h3>
+      <div className="w-full max-w-md bg-green-50 rounded-xl p-4">
         <div className="flex flex-col gap-2">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex items-center gap-3">
-              <benefit.icon className="w-5 h-5 text-blue-600 shrink-0" />
+              <Check className="w-5 h-5 text-green-600 shrink-0" />
               <span
                 className="text-gray-700 text-fluid-sm"
                 style={{ fontFamily: "Montserrat-Regular, sans-serif" }}
@@ -114,7 +104,7 @@ export const StepQualification = ({
             className="text-gray-700 font-medium text-fluid-sm"
             style={{ fontFamily: "Montserrat-SemiBold, sans-serif" }}
           >
-            Email Address
+            Email
           </label>
           <input
             type="email"
@@ -130,7 +120,7 @@ export const StepQualification = ({
             className="text-gray-700 font-medium text-fluid-sm"
             style={{ fontFamily: "Montserrat-SemiBold, sans-serif" }}
           >
-            Phone Number
+            Phone
           </label>
           <input
             type="tel"
@@ -152,7 +142,7 @@ export const StepQualification = ({
             className="text-gray-600 text-fluid-sm"
             style={{ fontFamily: "Montserrat-Regular, sans-serif" }}
           >
-            I agree to receive promotional offers and updates about exclusive vacation deals via email and phone.
+            I agree to receive promotional communications from Vitality Vacations and its affiliates.
           </span>
         </label>
       </div>

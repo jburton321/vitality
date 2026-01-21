@@ -6,14 +6,14 @@ interface StepPaymentProps {
 }
 
 const paymentOptions = [
-  { value: "credit-card", label: "Major Credit Card" },
-  { value: "cash-debit", label: "Cash/Debit" },
+  { value: "credit-card", label: "With a major credit card (Visa, Mastercard, Amex, Discover)" },
+  { value: "cash-debit", label: "With cash or debit card" },
 ];
 
 export const StepPayment = ({ value, onSelect }: StepPaymentProps): JSX.Element => {
   return (
     <MultiChoice
-      title="Preferred payment method?"
+      title="How Do You Normally Book Travel?"
       options={paymentOptions}
       selectedValue={value}
       onSelect={onSelect}

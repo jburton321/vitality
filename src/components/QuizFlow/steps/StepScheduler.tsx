@@ -56,7 +56,6 @@ export const StepScheduler = ({
   const [currentYear, setCurrentYear] = useState(2026);
 
   const days = generateCalendarDays(currentYear, currentMonth);
-  const today = new Date();
 
   const handlePrevMonth = () => {
     if (currentMonth === 0) {
@@ -93,16 +92,27 @@ export const StepScheduler = ({
           className="text-blue-900 text-center font-bold text-fluid-2xl uppercase mb-2"
           style={{ fontFamily: "Montserrat-Bold, sans-serif" }}
         >
-          Schedule Your Presentation
+          Select a Virtual Date & Time for Your VTC Session
         </h2>
-        <div className="flex items-center justify-center gap-2 text-gray-600">
-          <Globe className="w-4 h-4" />
-          <span
-            className="text-fluid-sm"
-            style={{ fontFamily: "Montserrat-Regular, sans-serif" }}
-          >
-            Time Zone: Your Local Time
-          </span>
+        <div className="flex flex-col items-center gap-1 text-gray-600">
+          <div className="flex items-center gap-2">
+            <Globe className="w-4 h-4" />
+            <span
+              className="text-fluid-sm"
+              style={{ fontFamily: "Montserrat-Regular, sans-serif" }}
+            >
+              Time Zone: Your Local Time
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Clock className="w-4 h-4" />
+            <span
+              className="text-fluid-sm"
+              style={{ fontFamily: "Montserrat-Regular, sans-serif" }}
+            >
+              Appointment Length: ~30-45 mins
+            </span>
+          </div>
         </div>
       </div>
 

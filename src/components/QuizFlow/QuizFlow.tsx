@@ -79,6 +79,8 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
 
   const getButtonText = (): string => {
     switch (currentStep) {
+      case 7:
+        return "RESERVE MY SPOT";
       case 8:
         return "PROCEED TO SCHEDULE";
       case 9:
@@ -158,6 +160,7 @@ export const QuizFlow = ({ onBack }: QuizFlowProps): JSX.Element => {
             onAcknowledgementChange={(key, value) =>
               updateFormData("acknowledgements", { ...formData.acknowledgements, [key]: value })
             }
+            firstName={formData.firstName}
           />
         );
       case 9:

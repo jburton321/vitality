@@ -6,15 +6,15 @@ interface StepJobProps {
 }
 
 const jobOptions = [
-  { value: "employed", label: "Employed" },
-  { value: "retired", label: "Retired" },
-  { value: "not-working", label: "Not Working" },
+  { value: "employed", label: "Gainfully Employed" },
+  { value: "retired", label: "Happily Retired" },
+  { value: "not-working", label: "Not Currently Working" },
 ];
 
 export const StepJob = ({ value, onSelect }: StepJobProps): JSX.Element => {
   return (
     <MultiChoice
-      title="What is your employment status?"
+      title="What's Your Employment Status?"
       options={jobOptions}
       selectedValue={value}
       onSelect={onSelect}

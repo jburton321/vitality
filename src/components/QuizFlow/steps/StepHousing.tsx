@@ -13,7 +13,7 @@ const housingOptions = [
 export const StepHousing = ({ value, onSelect }: StepHousingProps): JSX.Element => {
   return (
     <MultiChoice
-      title="Do you own or rent your home?"
+      title="Do You Own or Rent Your Home?"
       options={housingOptions}
       selectedValue={value}
       onSelect={onSelect}

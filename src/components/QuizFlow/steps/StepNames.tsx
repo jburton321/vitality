@@ -12,7 +12,7 @@ export const StepNames = ({ firstName, lastName, onFirstNameChange, onLastNameCh
         className="text-blue-900 text-center font-bold text-fluid-2xl uppercase"
         style={{ fontFamily: "Montserrat-Bold, sans-serif" }}
       >
-        Spouse/Partner Information
+        What's Your Spouse/Partner's First Name?
       </h2>
       <div className="flex flex-col gap-4 w-full max-w-md">
         <div className="flex flex-col gap-2">
